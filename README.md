@@ -19,7 +19,9 @@ The Basic tax samples are the smart contracts for getting started with writing b
 The Basic tax samples code includes the following main methods:
 
 Method	Description
+
 deploy	Used to deploy a smart contract
+
 invoke	Used to update a smart contract
 
 Note: In the Basic tax contract samples, the deploy method is called init.
@@ -29,7 +31,9 @@ When you call any of the methods, you must first pass a JSON string that include
 To create a simple contract to create, read, update, and delete asset data, use the following methods:
 
 Method	    Provides
+
 readSchemas The methods and associated properties of the JSON schema contract
+
 readSamples An example of the sample JSON data
 
 
