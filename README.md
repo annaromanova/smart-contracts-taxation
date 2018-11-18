@@ -18,3 +18,6 @@ The Basic tax samples are the smart contracts for getting started with writing b
 
 The Basic tax samples code includes the following main methods:
 
+Method	Description
+deploy	Used to deploy a smart contract
+invoke	Used to update a smart contract
