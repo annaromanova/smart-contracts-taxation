@@ -28,8 +28,8 @@ When you call any of the methods, you must first pass a JSON string that include
 
 To create a simple contract to create, read, update, and delete asset data, use the following methods:
 
-Method	            Provides
-'readSchemas'	The methods and associated properties of the JSON schema contract
-'readSamples'	An example of the sample JSON data
+Method	    Provides
+readSchemas The methods and associated properties of the JSON schema contract
+readSamples An example of the sample JSON data
 
 
