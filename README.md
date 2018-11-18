@@ -12,6 +12,7 @@ The following information is provided to help you to get started with the Basic 
 - Generating code
 - Next steps
 
+
 Overview
 
 The Basic tax samples are the smart contracts for getting started with writing blockchain contracts. The Basic contract includes operations for tracking tax data. The Basic tax samples are developed in the Solidity programming language. ormation, see Developing smart contracts for Watson IoT Platform blockchain integration.
@@ -35,5 +36,21 @@ Method	    Provides
 readSchemas The methods and associated properties of the JSON schema contract
 
 readSamples An example of the sample JSON data
+
+
+Requirements
+
+To correctly map the tax properties to the corresponding Blockchain contract properties, use the following required functions:
+
+Function	Used by the data mapping function to....
+
+update 
+Create records if one doesn't exist on the ledger
+Update data for existing records
+Map 
+Accept  input data in the form of JSON strings
+
+readSchemas	
+Expose the function names and properties that are required by the contract so that the data mapper can correctly map the event properties to the contract properties.
 
 
