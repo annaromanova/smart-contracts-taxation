@@ -73,6 +73,10 @@ Detailed information about how to complete each step is hyperlinked to the secti
 
 1. Downloading the Basic tax samples
 
+Download the Basic blockchain tax contract sample. You need the following Basic sample files, which are provided in the repository folder:
+
+The Basic contract source file
+
 
 
 
