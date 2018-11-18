@@ -77,7 +77,22 @@ Download the Basic blockchain tax contract sample. You need the following Basic 
 
 The Basic contract source file
 
+2. Creating the base contract
 
+To create the base source file for your Blockchain tax contract:
+
+Create a copy, which is the main source file of the Basic tax contract.
+Using an editor of your choice, open it.
+
+
+
+Initialize the contract with a version number, as outlined in the following code snippet:
+
+
+Define a contract state to keep track of the contract version.
+
+
+Note: You can eventually increase the complexity of the ContractState code in your contract, for example, you can add more contract state details, introduce asset state alerts, and other items that are outlined in other more advanced examples.
 
 
 
