@@ -54,3 +54,27 @@ readSchemas
 Expose the function names and properties that are required by the contract so that the data mapper can correctly map the event properties to the contract properties.
 
 
+Developing your Ethereum contracts using Basic tax clauses
+
+The Basic tax contract is an example recipe that is designed for you to customize and use to experiment with tax contract development for Blockchain. The current version of the Basic tax contract is simplistic with similar functions to create and update tax data.
+
+To use the Basic tax sample contract as a foundation to develop your own use cases into deployable chaincode, complete the following procedure:
+
+Download the Basic tax contract sample.
+Create the base contract and implement version control.
+Define the tax data structure.
+Initialize the contract.
+Define the invoke methods.
+Define the query methods for how the contract data is read.
+Define the callbacks.
+Develop the contract further.
+Detailed information about how to complete each step is hyperlinked to the sections that follow.
+
+
+1. Downloading the Basic tax samples
+
+
+
+
+
+
