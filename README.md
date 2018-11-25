@@ -60,15 +60,15 @@ The Basic tax contract is an example recipe that is designed for you to customiz
 
 To use the Basic tax sample contract as a foundation to develop your own use cases into deployable chaincode, complete the following procedure:
 
-Download the Basic tax contract sample.
-Create the base contract and implement version control.
-Define the tax data structure.
-Initialize the contract.
+Download the Basic tax contract sample;
+Create the base contract and implement version control;
+Define the tax data structure;
+Initialize the contract;
 Define the invoke methods.
-Define the query methods for how the contract data is read.
-Define the callbacks.
-Develop the contract further.
-Detailed information about how to complete each step is hyperlinked to the sections that follow.
+Define the query methods for how the contract data is read;
+Define the callbacks;
+Develop the contract further;
+Detailed information about how to complete each step is hyperlinked to the sections that follow;
 
 
 1. Downloading the Basic tax samples
@@ -92,8 +92,37 @@ Initialize the contract with a version number, as outlined in the following code
 Define a contract state to keep track of the contract version.
 
 
-Note: You can eventually increase the complexity of the ContractState code in your contract, for example, you can add more contract state details, introduce asset state alerts, and other items that are outlined in other more advanced examples.
+Note: You can eventually increase the complexity of the ContractState code in your contract, for example, you can add more contract state details, introduce asset state alerts, and other items.
+
+3. Defining the tax data structure
+
+The Basic contract provides the Blockchain contract code that is required for a tax calculation.
+
+The following code provides an example of how to define the data structure:
+
+4. Initializing the contract
+
+The init function is one of the three required functions of the chaincode and initializes the contract. The other required functions of the chaincode are invoke and query. The init function is called as a 'deploy' function to deploy the chaincode to the fabric. Notice the signature of the function.
 
 
+5. Defining the invoke methods
 
+Define the invoke methods for the create, read, update, and delete operations in your contract, which is where most of the contract action occurs. 
+
+
+6. Defining the 'query' methods
+
+Use a query method to define how the contract data is read. The Basic contract sample uses the following blockchain query implementation methods.
+
+
+7. Defining the callbacks
+
+
+8. Developing the contract further
+
+
+9. Generating code
+
+
+10. Next steps
 
