@@ -1,5 +1,10 @@
 # taxes-in-smart-contracts
+
 The Basic tax clauses for smart contracts samples
+
+Virtual currency transactions are taxable by law just like transactions in any other property. The IRS has issued guidance in IRS Notice 2014-21 for use by taxpayers and their return preparers that addresses transactions in virtual currency, also known as digital currency.
+
+IRS Notice 2014-21 is used for illustration of basic rules for developing tax clauses in smart contracts.
 
 The Basic tax clauses for smart contracts are sample Solidity blockchain contracts to help you to get started with blockchain development and integration on Ethereum. You can use the Basic tax clauses for smart contracts to create a blockchain contract that tracks, stores and processe tax data for the respective commercial smart contract.
 
