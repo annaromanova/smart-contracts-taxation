@@ -46,8 +46,8 @@ Flows of models
   Perform tax calculations (before and after transaction);
   Perform base function of the contract (payment for example);
   Send information for further processing in accounting system etc.;
-  Contains all information required for tax processing
-  Call for tax data
+  Contains all information required for tax processing;
+  Call for tax data;
 
   Provide tax data;
 
