@@ -54,7 +54,9 @@ Flows of models
 - Main conclusions:
 
 The three models were tried in course of the project. Due to immutability of blockchain keeping tax rules as a separate library of contracts or as  internal functions of base contract seems inefficient (difficulties with update upon changes of legislation etc.);
+
 The most promising model is to have required tax data and rules as oracle service (in-house or external);
+
 In tax relations the last mile problem is to verify that declared conditions in the contract are not only matched with facts, but as well confirmed by proper documents (tax residence certificates, invoices etc.) and all of them: contract, facts and documents are matched (evidencing the same state of facts). It might be predicted that all information (including images of goods, shipments etc.) may be verified and stored by special service providers (some kind of service oracles);
 
 
