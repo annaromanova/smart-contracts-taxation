@@ -2,132 +2,61 @@
 
 The Basic tax clauses for smart contracts samples
 
-Virtual currency transactions are taxable by law just like transactions in any other property. The IRS has issued guidance in IRS Notice 2014-21 for use by taxpayers and their return preparers that addresses transactions in virtual currency, also known as digital currency.
+Taxes in smart contracts can be considered from two points of view:
 
-IRS Notice 2014-21 is used for illustration of basic rules for developing tax clauses in smart contracts.
+Current rules for taxation of cryptocurrencies (for example IRS Notice 2014-21):
 
-The Basic tax clauses for smart contracts are sample Solidity blockchain contracts to help you to get started with blockchain development and integration on Ethereum. You can use the Basic tax clauses for smart contracts to create a blockchain contract that tracks, stores and processe tax data for the respective commercial smart contract.
+Virtual currency transactions are taxable by law just like transactions in any other property. Taxpayers who do not properly report the income tax consequences of virtual currency transactions can be audited for those transactions and, when appropriate, can be liable for penalties and interest.In more extreme situations, taxpayers could be subject to criminal prosecution for failing to properly report the income tax consequences of virtual currency transactions. 
 
-The following information is provided to help you to get started with the Basic tax clauses:
+The possible models for automatization of tax assessment for smart contracts:
 
-- Overview
-- Requirements
-- Developing your Ethereum contracts using Basic tax clauses
-- Invoking the tax clause contract
-- Generating code
-- Next steps
+Currently tax assessment for smart contracts is performed in traditional old-fashioned way - by separate team of tax accountants and lawyers out of blockchain environment. But very predictable, that smart contracts (not only in terms of Ethereum, but in more general sense) will finally replace paper contracts and relevant procedures for preparation and assessment of a contract will be moved to blockchain ecosystem (or other information processing system) as well.
 
+The presented project is dedicated to research and model possible ways of tax processing within blockchain ecosystem in present and in future (using Ethereum). IRS Notice 2014-21 requirements are used for illustration.
 
-Overview
+Flows of models
 
-The Basic tax samples are the smart contracts for getting started with writing blockchain contracts. The Basic contract includes operations for tracking tax data. The Basic tax samples are developed in the Solidity programming language. ormation, see Developing smart contracts for Watson IoT Platform blockchain integration.
+- Model 1: Tax rules as a separate library of smart contracts
+Base contract (for payment, withdrawal, deposit etc.):
+Call to library for tax rules;
+Get required information from library;
+Perform tax calculations (before and after transaction);
+Perform base function of the contract (payment for example);
+Send information for further processing in accounting system etc.;
 
-The Basic tax samples code includes the following main methods:
+Call for tax rules
+Library of smart contracts
 
-Method	Description
+Provide tax rules
 
-deploy	Used to deploy a smart contract
+- Model 2: Tax rules as internal functions of the base contract
 
-invoke	Used to update a smart contract
-
-Note: In the Basic tax contract samples, the deploy method is called init.
-
-When you call any of the methods, you must first pass a JSON string that includes the function name and a set of arguments as key-value pairs to the chain code instance. You can define multiple methods within the same contract.
-
-To create a simple contract to create, read, update, and delete asset data, use the following methods:
-
-Method	    Provides
-
-readSchemas The methods and associated properties of the JSON schema contract
-
-readSamples An example of the sample JSON data
+Base contract (for payment, withdrawal, deposit etc.):
+Perform auxiliary functions (including tax);
+Perform base function of the contract (payment for example);
+Send information for further processing in accounting system etc.;
 
 
-Requirements
+- Model 3: Tax rules as an oracle
+Base contract (for payment, withdrawal, deposit etc.):
+Call to oracle for required information;
+Get required information from oracle;
+Perform tax calculations (before and after transaction);
+Perform base function of the contract (payment for example);
+Send information for further processing in accounting system etc.;
+Contains all information required for tax processing
+Call for tax data
 
-To correctly map the tax properties to the corresponding Blockchain contract properties, use the following required functions:
+Provide tax data
 
-Function	Used by the data mapping function to....
+- Main conclusions:
 
-update 
-Create records if one doesn't exist on the ledger
-Update data for existing records
-Map 
-Accept  input data in the form of JSON strings
-
-readSchemas	
-Expose the function names and properties that are required by the contract so that the data mapper can correctly map the event properties to the contract properties.
-
-
-Developing your Ethereum contracts using Basic tax clauses
-
-The Basic tax contract is an example recipe that is designed for you to customize and use to experiment with tax contract development for Blockchain. The current version of the Basic tax contract is simplistic with similar functions to create and update tax data.
-
-To use the Basic tax sample contract as a foundation to develop your own use cases into deployable chaincode, complete the following procedure:
-
-Download the Basic tax contract sample;
-Create the base contract and implement version control;
-Define the tax data structure;
-Initialize the contract;
-Define the invoke methods.
-Define the query methods for how the contract data is read;
-Define the callbacks;
-Develop the contract further;
-Detailed information about how to complete each step is hyperlinked to the sections that follow;
-
-
-1. Downloading the Basic tax samples
-
-Download the Basic blockchain tax contract sample. You need the following Basic sample files, which are provided in the repository folder:
-
-The Basic contract source file
-
-2. Creating the base contract
-
-To create the base source file for your Blockchain tax contract:
-
-Create a copy, which is the main source file of the Basic tax contract.
-Using an editor of your choice, open it.
+The three models were tried in course of the project. Due to immutability of blockchain keeping tax rules as a separate library of contracts or as  internal functions of base contract seems inefficient (difficulties with update upon changes of legislation etc.);
+The most promising model is to have required tax data and rules as oracle service (in-house or external);
+In tax relations the last mile problem is to verify that declared conditions in the contract are not only matched with facts, but as well confirmed by proper documents (tax residence certificates, invoices etc.) and all of them: contract, facts and documents are matched (evidencing the same state of facts). It might be predicted that all information (including images of goods, shipments etc.) may be verified and stored by special service providers (some kind of service oracles);
 
 
 
-Initialize the contract with a version number, as outlined in the following code snippet:
+References:
 
-
-Define a contract state to keep track of the contract version.
-
-
-Note: You can eventually increase the complexity of the ContractState code in your contract, for example, you can add more contract state details, introduce asset state alerts, and other items.
-
-3. Defining the tax data structure
-
-The Basic contract provides the Blockchain contract code that is required for a tax calculation.
-
-The following code provides an example of how to define the data structure:
-
-4. Initializing the contract
-
-The init function is one of the three required functions of the chaincode and initializes the contract. The other required functions of the chaincode are invoke and query. The init function is called as a 'deploy' function to deploy the chaincode to the fabric. Notice the signature of the function.
-
-
-5. Defining the invoke methods
-
-Define the invoke methods for the create, read, update, and delete operations in your contract, which is where most of the contract action occurs. 
-
-
-6. Defining the 'query' methods
-
-Use a query method to define how the contract data is read. The Basic contract sample uses the following blockchain query implementation methods.
-
-
-7. Defining the callbacks
-
-
-8. Developing the contract further
-
-
-9. Generating code
-
-
-10. Next steps
-
+https://www.irs.gov/newsroom/irs-reminds-taxpayers-to-report-virtual-currency-transactions
