@@ -17,17 +17,17 @@ The presented project is dedicated to research and model possible ways of tax pr
 Flows of models
 
 - Model 1: Tax rules as a separate library of smart contracts
-Base contract (for payment, withdrawal, deposit etc.):
-Call to library for tax rules;
-Get required information from library;
-Perform tax calculations (before and after transaction);
-Perform base function of the contract (payment for example);
-Send information for further processing in accounting system etc.;
+  Base contract (for payment, withdrawal, deposit etc.):
+  Call to library for tax rules;
+  Get required information from library;
+  Perform tax calculations (before and after transaction);
+  Perform base function of the contract (payment for example);
+  Send information for further processing in accounting system etc.;
 
-Call for tax rules
-Library of smart contracts
+  Call for tax rules
+  Library of smart contracts
 
-Provide tax rules
+  Provide tax rules
 
 - Model 2: Tax rules as internal functions of the base contract
 
