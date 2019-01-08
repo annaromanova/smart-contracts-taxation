@@ -31,23 +31,23 @@ Flows of models
 
 - Model 2: Tax rules as internal functions of the base contract
 
-Base contract (for payment, withdrawal, deposit etc.):
-Perform auxiliary functions (including tax);
-Perform base function of the contract (payment for example);
-Send information for further processing in accounting system etc.;
+  Base contract (for payment, withdrawal, deposit etc.):
+  Perform auxiliary functions (including tax);
+  Perform base function of the contract (payment for example);
+  Send information for further processing in accounting system etc.;
 
 
 - Model 3: Tax rules as an oracle
-Base contract (for payment, withdrawal, deposit etc.):
-Call to oracle for required information;
-Get required information from oracle;
-Perform tax calculations (before and after transaction);
-Perform base function of the contract (payment for example);
-Send information for further processing in accounting system etc.;
-Contains all information required for tax processing
-Call for tax data
+  Base contract (for payment, withdrawal, deposit etc.):
+  Call to oracle for required information;
+  Get required information from oracle;
+  Perform tax calculations (before and after transaction);
+  Perform base function of the contract (payment for example);
+  Send information for further processing in accounting system etc.;
+  Contains all information required for tax processing
+  Call for tax data
 
-Provide tax data
+  Provide tax data
 
 - Main conclusions:
 
